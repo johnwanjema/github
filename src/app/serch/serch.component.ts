@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SerchComponent implements OnInit {
 
+  fun(){
+    alert('qwertyui');
+  }
+
   constructor() { }
+
 
   ngOnInit() {
   }
