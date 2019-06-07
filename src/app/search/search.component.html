@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col">
+    <label for="basic-url">User</label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search users" #user required>
+    </div>
+    <button type="submit" (click)="users(user)" class="btn btn-primary">Serch</button>
+  </div>
+  <div class="col">
+    <label for="basic-url">Repository</label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search repository" #repo required>
+    </div>
+    <button type="button" (click)="repos(repo)" class="btn btn-primary">Serch</button>
+  </div>
+</div>
+
+
