@@ -48,10 +48,7 @@ export class RepoService {
     return this.http.get('https://api.github.com/users/' + username);
   }
 
-  getrepository(repository: string) {
-    // this.https.get('api.github.com/search/repositories?q={quotes}{&page,per_page,sort,order'}
-}
-
+  
 constructor(private http: HttpClient) {
   // this.repo = new Repo('', 0, '', '', '');
 }
