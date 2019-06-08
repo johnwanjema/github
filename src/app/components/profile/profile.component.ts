@@ -24,6 +24,7 @@ export class ProfileComponent implements OnInit {
 
     this.http.get(repos).subscribe((data) => {
       this.result = data;
+      console.log(this.result)
 
     });
   }
