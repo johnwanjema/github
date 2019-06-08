@@ -1,4 +1,5 @@
 import { RepoService } from './services/repo.service';
+import {SearchrepoService} from './services/searchrepo.service'
 import { UserService } from './services/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -25,7 +26,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     HttpClientModule
   ],
   providers: [UserService,
-    RepoService
+    RepoService,SearchrepoService
   ],
   bootstrap: [AppComponent]
 })
