@@ -1,4 +1,5 @@
-
+import { User } from './../user';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,15 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class searchComponent implements OnInit {
 
-  users(search) {
-    let link =  https://api.github.com/search/users?q='
+
+  name: string;
+  repos_url: any;
+  
 
 
-    alert(search.value)
+  usersf(search) {
+    const link = 'https: //api.github.com/search/users?q=' + search.value;
+
+
+    console.log(link);
   }
 
   repos(repo) {
-    alert(repo.value)
+    alert(repo.value);
   }
 
   constructor() { }
