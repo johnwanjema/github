@@ -1,28 +1,50 @@
 # Github
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+## {Created on {6/8/2019}
 
-## Development server
+#### By **{John Wanjema}**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### {current Version 1.0}
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+{This is a website where users may enter a GitHub username into a form,and see names and descriptions of that person's public repositories. A person can also look for repositories}
 
-## Build
+## Setup/Installation Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## live site
 
-## Running unit tests
+[![Live site](./src/assets/1.png)]
+{click here to acess the live site(https://johnwanjema/github.io/github/)
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+{ created application using
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- CSS
+- Materialize
+- HTML
+- BOOTSTRAP
+- Angular CLI.
+  }
 
-## Further help
+## Behaviour Driven Devlopment(BDD)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# github
+| Behaviour | Input | Output |
+| search User | username | Display user, avatr and link to git hub |
+| search repository | repository name | Dispaly repositories with that name|
+| profile | | Takes you to my git hub page |
+
+## Support and contact details
+
+{{contact me through jonwanjema@gmail.com
+phone number:0721273839 for inquries and contributions.}}
+
+## License
+
+LICENSE(https://github.com/johnwanjema/github/blob/master/LICENSE)
+
+## Acknowledgments
+
+John Wanjema

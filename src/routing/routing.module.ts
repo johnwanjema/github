@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'search', component: searchComponent },
+  { path: '', redirectTo: 'profile', pathMatch: 'full' }
 ]
 
 @NgModule({

@@ -1,7 +1,6 @@
-
 <div class="container">
-    <form #gitform='ngForm' class="form-search">
-     <div class="form-group">
+  <form #gitform='ngForm' class="form-search">
+    <div class="form-group">
       <p>GithubSearchApp</p>
       <input type="text" class="form-control" placeholder="search" [(ngModel)]="username" name="username"
         (keyup)="findProfile()">
@@ -38,19 +37,19 @@
 </div>
 
 
-<!-- <div class="container">
-    <form #gitform='ngForm' class="form-search">
+<div class="container">
+  <form #gitform='ngForm' class="form-search">
     <div class="form-group">
-      <h1>GithubSearchApp</h1>
+      <p>GithubSearchApp</p>
       <input type="text" class="form-control" placeholder="search" [(ngModel)]="searchvalue" name="searchvalue"
-      (keyup)="findrepo()">
+        (keyup)="findrepo()">
     </div>
   </form>
 
   <div *ngIf="repository">
-      <p>{{repository.name}}</p>
-      <p>qwerty</p>
-    </div> -->
+    <p>{{repository.name}}</p>
+    <p>qwerty</p>
+  </div>
   <!-- <div class='row'>
     <div class="col-md-6">
 
@@ -74,6 +73,5 @@
       <p><a href="{{profile.public_repos}}" target="blank" style="color:white;">Repository</a></p>
       <p><a href="{{profile.html_url}}" class="btn btn-danger btn-xl" target="blank">View in Github</a></p>
     </div>
-  </div> -->
-<!-- </div> -->
-
+  </div>  -->
+</div>

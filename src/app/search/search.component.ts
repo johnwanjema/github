@@ -13,29 +13,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../search/serch.component.css']
 })
 export class searchComponent implements OnInit {
-  //   repo: Repo;
-  //   result: any;
 
-  //   constructor(private RepoService: RepoService, private http: HttpClient) {
-  //     this.repo = new Repo('', 0, '', '', '')
-  //   }
-
-  //   repos(rep) {
-  //     const repos = 'https://api.github.com/search/users?q=wanjema' ;
-  //      console.log(repos)
-
-  //     this.http.get(repos).subscribe((data) => {
-  //       this.result = data;
-  //       console.log(this.result)
-
-  //     });
-  //   }
-
-
-  //   ngOnInit() {
-  //     this.RepoService.repoInformation();
-  //     this.repo = this.RepoService.repo;
-  //   }
   profile: any;
   username: string;
   repos: any;
