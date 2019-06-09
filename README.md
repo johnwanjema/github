@@ -31,10 +31,10 @@
 
 ## Behaviour Driven Devlopment(BDD)
 
-| Behaviour | Input | Output |
-| search User | username | Display user, avatr and link to git hub |
-| search repository | repository name | Dispaly repositories with that name|
-| profile | | Takes you to my git hub page |
+| Behaviour            | Input                | Output                                      |
+| search User          | username             | Display user, avatr and link to git hub     |
+| search repository    | repository name      | Dispaly repositories with that name         |
+| profile              |                      |  Takes you to my git hub page               |
 
 ## Support and contact details
 
