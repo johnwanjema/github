@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class searchComponent implements OnInit {
 
-  profile: any;
+  user: any;
   username: string;
   repos: any;
   searchvalue: string;
@@ -27,7 +27,7 @@ export class searchComponent implements OnInit {
   findProfile() {
 
     this.RepoService.getProfileInfo(this.username).subscribe(result => {
-      this.profile = result;
+      this.user = result;
       console.log(this.username)
     });
   }

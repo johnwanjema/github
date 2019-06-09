@@ -1,56 +1,59 @@
 <div class="container">
-  <form #gitform='ngForm' class="form-search">
-    <div class="form-group">
-      <p>GithubSearchApp</p>
-      <input type="text" class="form-control" placeholder="search" [(ngModel)]="username" name="username"
-        (keyup)="findProfile()">
-    </div>
-  </form>
-  <div class='row'>
-    <div class="col-md-6">
-      <div *ngIf="profile">
-        <p>{{profile.name}}</p>
-        <p><a href="{{profile.html_url}}" target="blank">{{profile.login}}</a></p>
-        <p>{{profile.company}}</p>
+  <div class="row">
+    <div class="col">
+      <form #gitform='ngForm' class="form-search">
+        <div class="form-group">
+            <p>Search User</p>
+          <input type="text" class="form-control" placeholder="search User" [(ngModel)]="username" name="username"
+            (keyup)="findProfile()">
+        </div>
+      </form>
+      <div class='row'>
+        <div class="col-md-6">
+          <div *ngIf="user">
+            <p>{{user.name}}</p>
+            <p><a href="{{user.html_url}}" target="blank">{{user.login}}</a></p>
+            <p>{{user.company}}</p>
+          </div>
+          <img src="{{user.avatar_url}}" width="200px" height="300px" class="img-circle img-responsive"
+            alt="user-image">
+          <p>{{user.email}}</p>
+          <hr>
+          <div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="label label-primary" *ngIf="user.following"> Following {{user.following}} </span>
+            <span class="label label-primary" *ngIf="user.followers"> Followers {{user.followers}} </span><br>
+            <span class="label label-primary"> Repositories {{user.public_repos}} </span>
+
+          </p>
+          <p>{{user.bio}}</p>
+          <p>{{user.blog}}</p>
+          <p>{{user.hireable}}</p>
+          <p>{{user.location}}</p>
+          <p><a href="{{user.html_url}}" class="btn btn-danger btn-xl" target="blank">View in Github</a></p>
+        </div>
       </div>
-      <img src="{{profile.avatar_url}}" width="100px" class="img-circle img-responsive" alt="profile-image">
-      <p>{{profile.email}}</p>
-      <hr>
-      <div>
-      </div>
     </div>
-    <div class="col-md-6">
-      <p>
-        <span class="label label-primary" *ngIf="profile.following"> Following {{profile.following}} </span>
-        <span class="label label-primary" *ngIf="profile.followers"> Followers {{profile.followers}} </span>
-        <span class="label label-primary"> Repository {{profile.public_repos}} </span>
-        <span class="label label-info"></span>
-      </p>
-      <p>{{profile.bio}}</p>
-      <p>{{profile.blog}}</p>
-      <p>{{profile.hireable}}</p>
-      <p>{{profile.location}}</p>
-      <p><a href="{{profile.public_repos}}" target="blank" style="color:white;">Repository</a></p>
-      <p><a href="{{profile.html_url}}" class="btn btn-danger btn-xl" target="blank">View in Github</a></p>
-    </div>
-  </div>
-</div>
 
 
-<div class="container">
-  <form #gitform='ngForm' class="form-search">
-    <div class="form-group">
-      <p>GithubSearchApp</p>
-      <input type="text" class="form-control" placeholder="search" [(ngModel)]="searchvalue" name="searchvalue"
-        (keyup)="findrepo()">
-    </div>
-  </form>
+    <div class="col">
 
-  <div *ngIf="repository">
-    <p>{{repository.name}}</p>
-    <p>qwerty</p>
-  </div>
-  <!-- <div class='row'>
+      <form #gitform='ngForm' class="form-search">
+        <div class="form-group">
+          <p>Search Repository</p>
+          <input type="text" class="form-control" placeholder="search" [(ngModel)]="searchvalue" name="searchvalue"
+            (keyup)="findrepo()">
+        </div>
+      </form>
+
+      <div *ngIf="repository">
+        <p>{{repository.name}}</p>
+        <p>qwerty</p>
+      </div> -->
+      <!-- <div class='row'>
     <div class="col-md-6">
 
       <img src="{{profile.avatar_url}}" width="100px" class="img-circle img-responsive" alt="profile-image">
@@ -74,4 +77,7 @@
       <p><a href="{{profile.html_url}}" class="btn btn-danger btn-xl" target="blank">View in Github</a></p>
     </div>
   </div>  -->
+      <!-- </div> -->
+    </div>
+  </div>
 </div>
