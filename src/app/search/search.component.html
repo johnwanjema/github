@@ -3,9 +3,10 @@
     <div class="col">
       <form #gitform='ngForm' class="form-search">
         <div class="form-group">
-            <p>Search User</p>
+          <p>Search User</p>
           <input type="text" class="form-control" placeholder="search User" [(ngModel)]="username" name="username"
-            (keyup)="findProfile()">
+            (keyup)="findProfile();getprofilerepo(username)">
+
         </div>
       </form>
       <div class='row'>
@@ -33,8 +34,19 @@
           <p>{{user.blog}}</p>
           <p>{{user.hireable}}</p>
           <p>{{user.location}}</p>
-          <p><a href="{{user.html_url}}" class="btn btn-danger btn-xl" target="blank">View in Github</a></p>
-          <!-- <p>{{}}</p> -->
+          <p><a href="{{user.html_url}}" class="btn btn-success" target="blank">View in Github</a></p>
+        </div>
+
+
+        <div class="card-body" *ngFor='let repo of repos'>
+
+          <h4> <a href="{{repo.html_url}} " target="_blank">{{repo.name}}
+
+            </a>
+          </h4>
+          <p>{{repo.description}}</p>
+          <p>{{repo.url}}</p>
+          <hr>
         </div>
       </div>
     </div>
@@ -53,7 +65,7 @@
       <div *ngIf="repository">
         <p>{{repository.name}}</p>
         <p>qwerty</p>
-      </div> -->
+      </div>
       <!-- <div class='row'>
     <div class="col-md-6">
 

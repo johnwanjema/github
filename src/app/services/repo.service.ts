@@ -1,6 +1,7 @@
 import { Repo } from './../repo';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -8,9 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RepoService {
 
-  
+
   getProfileInfo(username: string) {
-    return this.http.get('https://api.github.com/users/' + username);
+    return this.http.get((environment.serch) + username);
   }
 
 
