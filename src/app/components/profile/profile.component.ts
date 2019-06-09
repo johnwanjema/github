@@ -2,6 +2,7 @@ import { User } from './../../user';
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getRepos() {
-    const repos = 'https://api.github.com/users/johnwanjema/repos';
+    const repos = (environment.apiUrl) ;
 
 
     this.http.get(repos).subscribe((data) => {

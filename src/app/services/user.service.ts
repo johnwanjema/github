@@ -1,6 +1,7 @@
 import { User } from './../user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class UserService {
       repo: string;
     }
     const promise = new Promise((resolve, reject) => {
-      var link = "https://api.github.com/users/johnwanjema?access_token=724d0b7d877e52ce02c97a7fdecdcdfc2edc715c";
+      var link = (environment.link);
 
       this.http.get<ApiResponse>(link).toPromise().then(
         (response) => {

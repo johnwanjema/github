@@ -1,8 +1,6 @@
 import { SearchrepoService } from './../services/searchrepo.service';
 import { Repo } from './../repo';
 
-
-
 import { RepoService } from './../services/repo.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
@@ -13,15 +11,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../search/serch.component.css']
 })
 export class searchComponent implements OnInit {
-
+  prepo:Repo;
   user: any;
   username: string;
   repos: any;
   searchvalue: string;
-  repository : any;
+  repository: any;
 
 
-  constructor(private RepoService: RepoService, private SearchrepoService: SearchrepoService) {
+  constructor(private RepoService: RepoService, private http: HttpClient,private SearchrepoService: SearchrepoService) {
   }
 
   findProfile() {
@@ -31,6 +29,23 @@ export class searchComponent implements OnInit {
       console.log(this.username)
     });
   }
+
+
+  // getprofilerepo(username: string) {
+  //   const promise = new Promise((resolve, reject) => {
+  //     this.http.get('https://api.github.com/users/' + username + '/repos').toPromise().then()(reponse => {
+
+  //     this.Repo
+  //     })
+
+  //   })
+
+
+  // }
+
+
+
+
 
 
   findrepo() {
