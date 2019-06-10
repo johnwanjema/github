@@ -21,11 +21,7 @@ export class UserService {
     }
     const promise = new Promise((resolve, reject) => {
 
-      this.clientid = 'Iv1.7776f51995c3fbfc';
-      this.clientsecret = '04f050d32219a8769fe2676ddccfb1a4322571a2';
-
-
-      var link = (environment.link + '?client_id=' + this.clientid + '&client_secret=' + this.clientsecret);
+      var link = (environment.link);
       console.log(link);
       this.http.get<ApiResponse>(link).toPromise().then(
         (response) => {

@@ -27,7 +27,7 @@ export class searchComponent implements OnInit {
       name: string;
     }
     const promise = new Promise((resolve, reject) => {
-      var link = (environment.serch + username + '/repos');
+      var link = (environment.serch + username + '/repos' +(environment.acesstoken));
       console.log(link)
       this.http.get<ApiResponse>(link).toPromise().then(
         (response) => {
@@ -37,7 +37,7 @@ export class searchComponent implements OnInit {
           console.log(response);
         },
         (error) => {
-          alert('No repository Found')
+          alert('No user Found')
           reject(error);
         }
       );
@@ -64,7 +64,7 @@ export class searchComponent implements OnInit {
   findrepo(gitsearch) {
     let search = gitsearch.value;
     console.log(search)
-    let finallink = 'https://api.github.com/users/' + search + '/repos';
+    let finallink = 'https://api.github.com/users/' + search + '/repos'+(environment.acesstoken);
     console.log(finallink);
 
     interface ApiResponse {
