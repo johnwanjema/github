@@ -7,7 +7,7 @@ export const environment = {
   acesstoken: "?access_token=2fa811e90b886480a14cede081f838724b641935",
   serch: "https://api.github.com/users/",
   apiUrl: "https://api.github.com/users/johnwanjema/repos",
-  link: "https://api.github.com/users/johnwanjema?access_token=2fa811e90b886480a14cede081f838724b641935"
+  link: "https://api.github.com/users/johnwanjema"
 };
 
 /*
