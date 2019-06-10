@@ -9,8 +9,8 @@ import { environment } from 'src/environments/environment';
 export class UserService {
 
   user: User;
-
-
+  clientid:string;
+  clientsecret:string;
   userInformation() {
     interface ApiResponse {
       login: string;
@@ -20,8 +20,13 @@ export class UserService {
       repo: string;
     }
     const promise = new Promise((resolve, reject) => {
-      var link = (environment.link);
 
+      this.clientid = 'Iv1.7776f51995c3fbfc';
+      this.clientsecret = '04f050d32219a8769fe2676ddccfb1a4322571a2';
+
+
+      var link = (environment.link + '?client_id=' + this.clientid + '&client_secret=' + this.clientsecret);
+      alert(link);
       this.http.get<ApiResponse>(link).toPromise().then(
         (response) => {
           this.user.name = response.login;
