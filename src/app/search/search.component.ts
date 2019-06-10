@@ -63,9 +63,9 @@ export class searchComponent implements OnInit {
 
   findrepo(gitsearch) {
     let search = gitsearch.value;
-    alert(search)
+    console.log(search)
     let finallink = 'https://api.github.com/users/' + search + '/repos';
-    alert(finallink);
+    console.log(finallink);
 
     interface ApiResponse {
       repositories: string;
@@ -78,7 +78,7 @@ export class searchComponent implements OnInit {
           this.repositories = response;
           resolve();
 
-          alert(this.repositories);
+          console.log(this.repositories);
         },
         (error) => {
           alert('error occured');

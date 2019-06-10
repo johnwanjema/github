@@ -26,7 +26,7 @@ export class UserService {
 
 
       var link = (environment.link + '?client_id=' + this.clientid + '&client_secret=' + this.clientsecret);
-      alert(link);
+      console.log(link);
       this.http.get<ApiResponse>(link).toPromise().then(
         (response) => {
           this.user.name = response.login;
