@@ -16,8 +16,9 @@ export class searchComponent implements OnInit {
   user: any;
   username: string;
   repos: any;
-  searchvalue: string;
-  repository: any;
+  search: any;
+  repositories: any;
+
 
 
   getprofilerepo(username) {
@@ -36,7 +37,7 @@ export class searchComponent implements OnInit {
           console.log(response);
         },
         (error) => {
-
+          alert('No repository Found')
           reject(error);
         }
       );
@@ -57,30 +58,37 @@ export class searchComponent implements OnInit {
   }
 
 
-  //  {
-  //   const promise = new Promise((resolve, reject) => {
-  //     this.http.get('https://api.github.com/users/' + username + '/repos').toPromise().then()(reponse => {
-
-  //     this.Repo
-  //     })
-
-  //   })
-
-
-  // }
 
 
 
+  findrepo(gitsearch) {
+    let search = gitsearch.value;
+    alert(search)
+    let finallink = 'https://api.github.com/users/' + search + '/repos';
+    alert(finallink);
 
+    interface ApiResponse {
+      repositories: string;
+      name: string;
+    }
+    const promise = new Promise((resolve, reject) => {
 
+      this.http.get<ApiResponse>(finallink).toPromise().then(
+        (response) => {
+          this.repositories = response;
+          resolve();
 
-  findrepo() {
-
-    this.SearchrepoService.getrepository(this.searchvalue).subscribe(output => {
-      this.repository = output;
-      console.log(this.searchvalue)
-
+          alert(this.repositories);
+        },
+        (error) => {
+          alert('error occured');
+          reject(error);
+        }
+      );
     });
+    return promise;
+
+
   }
 
   ngOnInit() {
